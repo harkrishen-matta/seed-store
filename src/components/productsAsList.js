@@ -44,7 +44,7 @@ const ProductsAsList = (props) => {
         <div className={classes.root}>
             <ImageList rowHeight={200} className={classes.imageList}>
                 {props.products.map((item) => (
-                    <ImageListItem key={item.image1} onClick={() => toProduct(item.id)}>
+                    <ImageListItem data-testid="products-as-list" key={item.image1} onClick={() => toProduct(item.id)}>
                         <img src={item.image1} alt={item.title}/>
                         <ImageListItemBar
                             title={<Typography variant="h6"> {item.title} </Typography>}
@@ -61,7 +61,7 @@ const ProductsAsList = (props) => {
                                       justify="center"
                                       alignItems="center" >
                                     <Grid item>
-                                    <IconButton aria-label={`Full Details ${item.title}`} className={classes.icon}
+                                    <IconButton data-testid={`product-list-item-infoBtn${item.id}`} aria-label={`Full Details ${item.title}`} className={classes.icon}
                                                 onClick={() => toProduct(item.id)}>
                                         <InfoIcon/>
                                     </IconButton>

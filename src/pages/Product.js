@@ -65,7 +65,7 @@ const Product = () => {
                 <div> Product is Loading</div>
             ) : (
                 <div>
-                    <Paper className={classes.paper}
+                    <Paper data-testid={`product-info-${product.id}`} className={classes.paper}
                            style={{backgroundColor: `${product.backgroundColor}`, color: `${product.textColor}`}}>
                         <Grid container spacing={2}>
                             <Grid item>

@@ -40,6 +40,7 @@ const Home = () => {
                     alignItems="center"
                     spacing={2}
                     className={classes.root}
+                    data-testid="home-grid"
                 >
                     <Grid item>
                         <Typography variant="h2"> Products as a List </Typography>
